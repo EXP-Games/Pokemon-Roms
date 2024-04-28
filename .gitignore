@@ -164,6 +164,8 @@ simulator/VisualBoyAdvance1.8CN
 simulator/NO$Zoomer2.3.0.2-GBA-NDS
 
 *.sav
-*.gb
+*.gbc
 *.gba
 *.nds
+*.cia
+*.patch
