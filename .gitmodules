@@ -1,0 +1,3 @@
+[submodule "simulator/PyBoy"]
+	path = simulator/PyBoy
+	url = https://github.com/Baekalfen/PyBoy
