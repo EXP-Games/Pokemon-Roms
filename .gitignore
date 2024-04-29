@@ -163,6 +163,7 @@ cython_debug/
 simulator/VisualBoyAdvance1.8CN
 simulator/NO$Zoomer2.3.0.2-GBA-NDS
 
+*.exe
 *.sav
 *.gbc
 *.gba
