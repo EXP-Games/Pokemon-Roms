@@ -1,0 +1,18 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* 确保列有足够的高度 */
+.col-md-4 {
+    height: 200px; /* 可以根据实际需要调整这个高度 */
+}
+
+/* 调整图片以填充其容器 */
+.card-img {
+    height: 100%; /* 填满其父容器的高度 */
+    width: 100%;  /* 填满其父容器的宽度 */
+    object-fit: cover; /* 保持图片的纵横比，填充整个容器而不失真 */
+}
