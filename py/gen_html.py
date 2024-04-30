@@ -1,1 +1,0 @@
-https://code.z01.com/v4/components/card.html#horizontal
