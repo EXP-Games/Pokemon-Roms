@@ -38,3 +38,20 @@ body {
 .bold-border {
     border: 2px solid #000000; /* 设置边框为2px粗且颜色为黑色 */
 }
+
+.button-link {
+    background: none;            /* 无背景 */
+    color: blue;                 /* 链接蓝色 */
+    border: none;                /* 无边框 */
+    padding: 0;                  /* 无内边距 */
+    margin: 0;                   /* 根据需要调整外边距 */
+    font: inherit;               /* 继承字体样式 */
+    cursor: pointer;             /* 手型光标 */
+    text-decoration: underline;  /* 下划线，模仿链接 */
+}
+
+.button-link:hover,
+.button-link:focus {
+    text-decoration: none;       /* 鼠标悬停和聚焦时无下划线 */
+    color: darkblue;             /* 悬停时颜色加深 */
+}
