@@ -1,3 +1,17 @@
+body {
+    /* 创建一个角度倾斜的七彩渐变背景，每种颜色加 50% 透明度 */
+    background: linear-gradient(45deg, 
+                                rgba(255, 0, 0, 0.5), /* red */
+                                rgba(255, 165, 0, 0.5), /* orange */
+                                rgba(255, 255, 0, 0.5), /* yellow */
+                                rgba(0, 128, 0, 0.5), /* green */
+                                rgba(0, 0, 255, 0.5), /* blue */
+                                rgba(75, 0, 130, 0.5), /* indigo */
+                                rgba(238, 130, 238, 0.5)); /* violet */
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -5,14 +19,22 @@
     justify-content: center;
 }
 
-/* 确保列有足够的高度 */
+/* 设置图片容器为 Flexbox，使内容垂直和水平居中 */
 .col-md-4 {
-    height: 200px; /* 可以根据实际需要调整这个高度 */
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    padding: 2px; /* 维持间隙 */
 }
 
-/* 调整图片以填充其容器 */
 .card-img {
-    height: 100%; /* 填满其父容器的高度 */
-    width: 100%;  /* 填满其父容器的宽度 */
-    object-fit: cover; /* 保持图片的纵横比，填充整个容器而不失真 */
+    display: block; /* 设置图片为块级元素 */
+    margin: auto; /* 水平居中图片 */
+    padding: 2px; /* 在图片周围添加10px的间隙 */
+    max-width: 100%; /* 确保图片不会超出容器宽度 */
+    height: auto; /* 保持图片原有比例 */
+}
+
+.bold-border {
+    border: 2px solid #000000; /* 设置边框为2px粗且颜色为黑色 */
 }
