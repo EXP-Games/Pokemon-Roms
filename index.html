@@ -1103,8 +1103,14 @@
                   confirmButton.disabled = false;
                   confirmButton.textContent = '我已支付';
                   confirmButton.onclick = function () {
-                      window.location.href = downloadUrl; // 重定向到下载路径
-                      closeModal();
+                    const a = document.createElement('a');
+                    a.href = downloadUrl;
+                    a.download = '';
+                    a.target = '_blank';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    closeModal();
                   };
 
                   // 在支付倒计时结束后的 30 秒内，若用户没有点击【我已支付】按钮，则自动关闭
