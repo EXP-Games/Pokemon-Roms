@@ -12,6 +12,13 @@ body {
     background-size: cover;
 }
 
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;  /* 确保它在页面的最顶层 */
+    width: 100%; /* 确保它宽度与容器一致 */
+}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
