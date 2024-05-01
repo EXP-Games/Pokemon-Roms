@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon ROMs</title>
-    <link rel="icon" href="./favicon.png" type="image/jpg">
+    <link rel="icon" href="./docs/favicon.png" type="image/jpg">
     <script src="./docs/js/bootstrap.bundle.min.js"></script>
     <link href="./docs/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./docs/css/style.css">
@@ -1078,7 +1078,7 @@
                   </div>
               </div>
               <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消下载</button>
+                  <button type="button" class="btn btn-secondary" onclick="closeModal()">取消下载</button>
                   <button type="button" class="btn btn-primary" id="confirmButton" disabled>我已支付 (60)</button>
               </div>
           </div>
@@ -1088,16 +1088,15 @@
     <script>
       // JavaScript for countdown and enabling the button
       let timer;
-      let counter = 60;
+      let counter = 5; // 调整为 60 秒支付
       document.getElementById('downloadModal').addEventListener('show.bs.modal', function (event) {
           const button = event.relatedTarget; // Button that triggered the modal
           const downloadUrl = button.getAttribute('data-bs-download'); // Extract info from data-* attributes
           const confirmButton = document.getElementById('confirmButton');
-          const modal = new bootstrap.Modal(document.getElementById('downloadModal'));
-      
+
           confirmButton.disabled = true;
           confirmButton.textContent = `我已支付 (${counter})`;
-      
+
           timer = setInterval(function () {
               counter--;
               if (counter <= 0) {
@@ -1106,21 +1105,28 @@
                   confirmButton.textContent = '我已支付';
                   confirmButton.onclick = function () {
                       window.location.href = downloadUrl; // Redirect to the download URL
-                      modal.hide(); // Hide the modal after redirection
+                      closeModal()
                   };
               } else {
                   confirmButton.textContent = `我已支付 (${counter})`;
               }
           }, 1000);
       });
-      
+
       document.getElementById('downloadModal').addEventListener('hide.bs.modal', function () {
           clearInterval(timer);
-          counter = 60; // Reset counter for next use
+          counter = 5; // Reset counter for next use
       });
 
+      // 定义一个函数用来关闭模态框
+      function closeModal() {
+        var modalInstance = bootstrap.Modal.getInstance(document.getElementById('downloadModal'));
+        if (modalInstance) {
+          modalInstance.hide();
+        }
+      }
+
     </script>
-      
 
 </body>
 </html>
