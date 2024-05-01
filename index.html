@@ -1067,19 +1067,19 @@
       <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
               <div class="modal-header">
-                  <h5 class="modal-title" id="downloadModalLabel">下载确认</h5>
+                  <h5 class="modal-title" id="downloadModalLabel">请在 1 分钟内<font color="red">支付 5 元</font></h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                   <div class="d-flex justify-content-around">
-                      <img src="img1.jpg" class="img-fluid" alt="Image 1">
-                      <img src="img2.jpg" class="img-fluid" alt="Image 2">
-                      <img src="img3.jpg" class="img-fluid" alt="Image 3">
+                      <img src="./imgs/pay/alipay.png" class="img-fluid" alt="alipay" width="33%">
+                      <img src="./imgs/pay/wechat.png" class="img-fluid" alt="wechat" width="33%">
+                      <img src="./imgs/pay/QQ.png" class="img-fluid" alt="QQ" width="33%">
                   </div>
               </div>
               <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                  <button type="button" class="btn btn-primary" id="confirmButton" disabled>确认 (60)</button>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消下载</button>
+                  <button type="button" class="btn btn-primary" id="confirmButton" disabled>我已支付 (60)</button>
               </div>
           </div>
       </div>
@@ -1088,7 +1088,7 @@
     <script>
       // JavaScript for countdown and enabling the button
       let timer;
-      let counter = 5;
+      let counter = 60;
       document.getElementById('downloadModal').addEventListener('show.bs.modal', function (event) {
           const button = event.relatedTarget; // Button that triggered the modal
           const downloadUrl = button.getAttribute('data-bs-download'); // Extract info from data-* attributes
@@ -1096,20 +1096,20 @@
           const modal = new bootstrap.Modal(document.getElementById('downloadModal'));
       
           confirmButton.disabled = true;
-          confirmButton.textContent = `确认 (${counter})`;
+          confirmButton.textContent = `我已支付 (${counter})`;
       
           timer = setInterval(function () {
               counter--;
               if (counter <= 0) {
                   clearInterval(timer);
                   confirmButton.disabled = false;
-                  confirmButton.textContent = '确认';
+                  confirmButton.textContent = '我已支付';
                   confirmButton.onclick = function () {
                       window.location.href = downloadUrl; // Redirect to the download URL
                       modal.hide(); // Hide the modal after redirection
                   };
               } else {
-                  confirmButton.textContent = `确认 (${counter})`;
+                  confirmButton.textContent = `我已支付 (${counter})`;
               }
           }, 1000);
       });
@@ -1119,12 +1119,6 @@
           counter = 60; // Reset counter for next use
       });
 
-      // For the "Cancel" button and the close "X" button:
-      document.querySelectorAll('[data-bs-dismiss="modal"]').forEach(function (button) {
-        button.addEventListener('click', function () {
-            modalInstance.hide();
-        });
-      });
     </script>
       
 
