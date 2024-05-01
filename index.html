@@ -1062,7 +1062,7 @@
     </div>
 
 
-    <!-- Modal -->
+    <!-- 支付模态框 -->
     <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -1086,12 +1086,11 @@
     </div>
 
     <script>
-      // JavaScript for countdown and enabling the button
       let timer;
-      let counter = 5; // 调整为 60 秒支付
+      let counter = 60; // 60 内秒支付
       document.getElementById('downloadModal').addEventListener('show.bs.modal', function (event) {
-          const button = event.relatedTarget; // Button that triggered the modal
-          const downloadUrl = button.getAttribute('data-bs-download'); // Extract info from data-* attributes
+          const button = event.relatedTarget;
+          const downloadUrl = button.getAttribute('data-bs-download');
           const confirmButton = document.getElementById('confirmButton');
 
           confirmButton.disabled = true;
@@ -1104,9 +1103,14 @@
                   confirmButton.disabled = false;
                   confirmButton.textContent = '我已支付';
                   confirmButton.onclick = function () {
-                      window.location.href = downloadUrl; // Redirect to the download URL
-                      closeModal()
+                      window.location.href = downloadUrl; // 重定向到下载路径
+                      closeModal();
                   };
+
+                  // 在支付倒计时结束后的 30 秒内，若用户没有点击【我已支付】按钮，则自动关闭
+                  autoCloseTimer = setTimeout(function () {
+                    closeModal();
+                  }, 30000);
               } else {
                   confirmButton.textContent = `我已支付 (${counter})`;
               }
@@ -1115,10 +1119,10 @@
 
       document.getElementById('downloadModal').addEventListener('hide.bs.modal', function () {
           clearInterval(timer);
-          counter = 5; // Reset counter for next use
+          counter = 60; // 重置支付倒计时
       });
 
-      // 定义一个函数用来关闭模态框
+      // 关闭模态框
       function closeModal() {
         var modalInstance = bootstrap.Modal.getInstance(document.getElementById('downloadModal'));
         if (modalInstance) {
