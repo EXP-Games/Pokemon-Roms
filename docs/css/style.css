@@ -64,6 +64,25 @@ body {
 }
 
 
+.header-container {
+    display: flex;
+    align-items: center;
+}
+.header-title {
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+.header-explanation {
+    padding: 10px;
+    margin-left: 20px;
+    background-image: linear-gradient(to right, #ffd700, #b8860b);
+    border: 3px solid hsl(210.8, 73.86%, 30%);
+    border-radius: 5px;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
 .tooltip-inner {
     text-align: left; /* 设置文本为左对齐 */
     font-size: 11px; /* 设置字号为 11px，大约等于 8 号字体 */
