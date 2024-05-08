@@ -62,3 +62,10 @@ body {
     text-decoration: none;       /* 鼠标悬停和聚焦时无下划线 */
     color: darkblue;             /* 悬停时颜色加深 */
 }
+
+
+.tooltip-inner {
+    text-align: left; /* 设置文本为左对齐 */
+    font-size: 11px; /* 设置字号为 11px，大约等于 8 号字体 */
+}
+  
