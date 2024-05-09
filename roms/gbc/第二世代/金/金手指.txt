@@ -1,0 +1,705 @@
+来源网页：https://glitchcity.wiki/Pok%C3%A9mon_Gold_and_Silver_(KO)_GameShark_codes
+以下为机翻
+
+播放器
+010F26D6、014227D6、013F28D6 - 最高金额
+
+名称修饰符
+（数字不可用）
+
+50(h) 必须添加到您姓名的最后一个字符 +1 的第二个字节，例如，如果您想要一个四个字母的姓名，请使用 015066D2。
+
+字符 1：
+
+01xx5ED2
+01xx5FD2
+
+字符 2：
+
+01xx60D2
+01xx61D2
+
+字符 3：
+
+01xx62D2
+01xx63D2
+
+字符 4：
+
+01xx64D2
+01xx65D2
+
+字符 5：
+
+01xx66D2
+01xx67D2
+
+结束名（如果是五个字符名，则必须为 50）：
+
+01xx68D2 - 结束名
+
+对手的名字
+（数字不可用）
+
+必须将 50(h) 添加到竞争对手名称的最后一个字符 +1 的第二个字节，例如，如果您想要一个四个字母的名称，请使用 01507CD2。
+
+字符 1：
+
+01xx74D2
+01xx75D2
+
+字符 2：
+
+01xx76D2
+01xx77D2
+
+字符 3：
+
+01xx78D2
+01xx79D2
+
+字符 4：
+
+01xx7AD2
+01xx7BD2
+
+字符 5：
+
+01xx7CD2
+01xx7DD2
+
+结束名（如果是五个字符名，则必须为 50）：
+
+01xx7ED2 - 结束名
+
+派对神奇宝贝代码
+注意：性别由神奇宝贝的攻击 IV 决定。如果 Attack IV 为 2、3、6、7、A（十进制：10）、B（十进制：11）、E（十进制：14）或 F（十进制：15）且其他 IV 为 A，则神奇宝贝是闪亮的（十进制：10）每个。
+
+
+01xx1FDB - 神奇宝贝的数量
+01xx20DB - 神奇宝贝 1 种（字节 1）
+01xx21DB - 神奇宝贝 2 种（字节 1）
+01xx22DB - 神奇宝贝 3 种（字节 1）
+01xx23DB - 神奇宝贝 4 种（字节 1）
+01xx24DB - 神奇宝贝 5 种（字节 1）
+01xx25DB - 口袋妖怪 6 种（字节 1）
+01xx26DB - 如果有 6 个口袋妖怪（必须是 FF），则结束派对列表
+
+神奇宝贝 1
+
+01xx27DB - Species byte 2
+01xx28DB - Item Held
+01xx29DB - Move 1
+01xx2ADB - Move 2
+01xx2BDB - Move 3
+01xx2CDB - Move 4
+01xx2DDB, 01xx2EDB - ID Number
+01xx2FDB, 01xx30DB, 01xx31DB - Experience
+01xx32DB, 01xx33DB - HP stat experience
+01xx34DB, 01xx35DB - Attack统计经验
+01xx36DB、01xx37DB - 防御统计经验
+01xx38DB、01xx39DB - 速度统计经验
+01xx3ADB、01xx3BDB - 特殊统计经验
+01xx3CDB - 攻击/防御 IV
+01xx3DDB - 速度/特殊 IV
+01xx3EDB- 移动 1
+的 PP 01xx3FDB - 移动 2 的
+PP 01xx40DB -第 3
+步的 01xx41DB - 第 4 步的 PP
+01xx42DB - 幸福/孵化时间
+010143DB - PokéRus
+01xx46DB - Level
+01xx47DB, 01xx48DB - Status
+01xx49DB, 01xx4ADB - HP
+01xx4BDB, 01xx4CDB - Max HP
+01xx4DDB, 01xx4EDB - Attack
+01xx4FDB, 01xx50DB - Defense
+01xx51DB, 01xx52DB - Speed
+01xx53DB, 01xx54DB - Special Defense
+01xx55DB, 01xx56DB - Special Attack
+
+神奇宝贝 2
+
+01xx57DB - Species byte 2
+01xx58DB- Item Held
+01xx59DB - Move 1
+01xx5ADB - Move 2
+01xx5BDB - Move 3
+01xx5CDB - Move 4
+01xx5DDB, 01xx5EDB - ID Number
+01xx5FDB, 01xx60DB, 01xx61DB - Experience
+01xx62DB, 01xx63DB - HP stat experience
+01xx64DB, 01xx65DB - Attack统计经验
+01xx66DB、01xx67DB - 防御统计经验
+01xx68DB、01xx69DB - 速度统计经验
+01xx6ADB、01xx6BDB - 特殊统计经验
+01xx6CDB - 攻击/防御 IV
+01xx6DDB - 速度/特殊 IV
+01xx6EDB- 移动 1
+的 PP 01xx6FDB - 移动 2 的
+PP 01xx70DB -第 3
+步的 01xx71DB - 第 4 步的 PP
+01xx72DB - 幸福/孵化时间
+010173DB - PokéRus
+01xx76DB - Level
+01xx77DB, 01xx78DB - Status
+01xx79DB, 01xx7ADB - HP
+01xx7BDB, 01xx7CDB - Max HP
+01xx7DDB, 01xx7EDB - Attack
+01xx7FDB, 01xx80DB - Defense
+01xx81DB, 01xx82DB - Speed
+01xx83DB, 01xx84DB - Special Defense
+01xx85DB, 01xx86DB - Special Attack
+
+
+神奇宝贝 3
+
+01xx87DB - Species byte 2
+01xx88DB- Item Held
+01xx89DB - Move 1
+01xx8ADB - Move 2
+01xx8BDB - Move 3
+01xx8CDB - Move 4
+01xx8DDB, 01xx8EDB - ID Number
+01xx8FDB, 01xx90DB, 01xx91DB - Experience
+01xx92DB, 01xx93DB - HP stat experience
+01xx94DB, 01xx95DB - Attack统计经验
+01xx96DB、01xx97DB - 防御统计经验
+01xx98DB、01xx99DB - 速度统计经验
+01xx9ADB、01xx9BDB - 特殊统计经验
+01xx9CDB - 攻击/防御 IV
+01xx9DDB - 速度/特殊 IV
+01xx9EDB- 移动 1
+的 PP 01xx9FDB - 移动 2 的
+PP 01xxA0DB -第 3
+步的 01xxA1DB - 第 4 步的 PP
+01xxA2DB - 幸福/孵化时间
+0101A3DB - PokéRus
+01xxA6DB - Level
+01xxA7DB, 01xxA8DB - Status
+01xxA9DB, 01xxAADB - HP
+01xxABDB, 01xxACDB - Max HP
+01xxADDB, 01xxAEDB - Attack
+01xxAFDB, 01xxB0DB - Defense
+01xxB1DB, 01xxB2DB - Speed
+01xxB3DB, 01xxB4DB - Special Defense
+01xxB5DB, 01xxB6DB - Special Attack
+
+神奇宝贝 4
+
+01xxB7DB - 物种字节 2
+01xxB8DB- 持有物品
+01xxB9DB - 移动 1
+01xxBADB - 移动 2
+01xxBBDB - 移动 3
+01xxBCDB - 移动 4
+01xxBDDB, 01xxBEDB - ID 号
+01xxBFDB, 01xxC0DB, 01xxC1DB - 经验
+01xxC2DB, 01xxC3DB, 01xxC3DB -
+01xx5DB 攻击 01xxC经验统计经验
+01xxC6DB, 01xxC7DB - 防御统计经验
+01xxC8DB, 01xxC9DB - 速度统计经验
+01xxCADB, 01xxCBDB - 特殊统计经验
+01xxCCDB - 攻击/防御 IV
+01xxCDDB - 速度/特殊 IV
+01xxCEDB- 移动 1
+的 PP 01xxCFDB - 移动 2 的
+PP 01xxD0DB - PP第 3
+步的 01xxD1DB - 第 4 步的 PP
+01xxD2DB - 幸福/孵化时间
+0101D3DB - PokéRus
+01xxD6DB - Level
+01xxD7DB, 01xxD8DB - Status
+01xxD9DB, 01xxDADB - HP
+01xxDBDB, 01xxDCDB - Max HP
+01xxDDDB, 01xxDEDB - Attack
+01xxDFDB, 01xxE0DB - Defense
+01xxE1DB, 01xxE2DB - Speed
+01xxE3DB, 01xxE4DB - Special Defense
+01xxE5DB, 01xxE6DB - Special Attack
+
+神奇宝贝 5
+
+01xxE7DB - 物种字节 2
+01xxE8DB- 持有的物品
+01xxE9DB - 移动 1
+01xxEADB - 移动 2
+01xxEBDB - 移动 3
+01xxECDB - 移动 4
+01xxEDDB, 01xxEEDB - ID 号
+01xxEFDB, 01xxF0DB, 01xxF1DB - 经验
+01xxF2DB, 01xxF3DB, 01xxF3DB -
+01xxF4 攻击经验统计经验
+01xxF6DB, 01xxF7DB - 防御统计经验
+01xxF8DB, 01xxF9DB - 速度统计经验
+01xxFADB, 01xxFBDB - 特殊统计经验
+01xxFCDB - 攻击/防御 IV
+01xxFDDB - 速度/特殊 IV
+01xxFEDB- 移动 1
+的 PP 01xxFFDB - 移动 2 的
+PP 01xx00DC - PP第 3
+步的 01xx01DC - 第 4 步的 PP
+01xx02DC - 幸福/孵化时间
+010103DC - PokéRus
+01xx06DC - Level
+01xx07DC, 01xx08DC - Status
+01xx09DC, 01xx0ADC - HP
+01xx0BDC, 01xx0CDC - Max HP
+01xx0DDC, 01xx0EDC - Attack
+01xx0FDC, 01xx10DC - Defense
+01xx11DC, 01xx12DC - Speed
+01xx13DC, 01xx14DC - Special Defense
+01xx15DC, 01xx16DC - Special Attack
+
+神奇宝贝 6
+
+01xx17DC - 物种字节 2
+01xx18DC- 持有物品
+01xx19DC - 移动 1
+01xx1ADC - 移动 2
+01xx1BDC - 移动 3
+01xx1CDC - 移动 4
+01xx1DDC, 01xx1EDC - ID 号
+01xx1FDC, 01xx20DC, 01xx21DC - 经验
+01xx212DC, 01xx224DC - HP
+xx 0 DC经验统计经验
+01xx26DC，01xx27DC - 防御统计经验
+01xx28DC，01xx29DC - 速度统计经验
+01xx2ADC，01xx2BDC - 特殊统计经验
+01xx2CDC - 攻击/防御 IV
+01xx2DDC - 速度/特殊 IV
+01xx2EDC- 移动 1
+的 PP 01xx2FDC - 移动 2 的
+PP 01xx30DC - PP第 3
+步的 01xx31DC - 第 4 步的 PP
+01xx32DC - 幸福/孵化时间
+010133DC - PokéRus
+01xx36DC - Level
+01xx37DC, 01xx38DC - Status
+01xx39DC, 01xx3ADC - HP
+01xx3BDC, 01xx3CDC - Max HP
+01xx3DDC, 01xx3EDC - Attack
+01xx3FDC, 01xx40DC - Defense
+01xx41DC, 01xx42DC - Speed
+01xx43DC, 01xx44DC - Special Defense
+01xx45DC, 01xx46DC - Special Attack
+
+派对宝可梦 OT 名称
+
+01xx47DC ~ 01xx51DC - 神奇宝贝 1
+01xx52DC ~ 01xx5CDC - 神奇宝贝 2
+01xx5DDC ~ 01xx67DC - 神奇宝贝 3
+01xx68DC ~ 01xx72DC - 神奇宝贝 4
+01xx73DC ~ 01xx7DDC - 神奇宝贝 5
+01xx7EDC ~ 01xx88DC - 神奇宝贝 6
+
+派对宝可梦昵称
+
+01xx89DC ~ 01xx93DC - 神奇宝贝 1
+01xx94DC ~ 01xx9EDC - 神奇宝贝 2
+01xx9FDC ~ 01xxA9DC - 神奇宝贝 3
+01xxAADC ~ 01xxB4DC - 神奇宝贝 4
+01xxB5DC ~ 01xxBFDC - 神奇宝贝 5
+01xxC0DC ~ 01xxCADC - 神奇宝贝 6
+
+图鉴代码
+都看过
+
+01FF01DD
+01FF02DD
+01FF03DD
+01FF04DD
+01FF05DD
+01FF06DD
+01FF07DD
+01FF08DD
+01FF09DD
+01FF0ADD
+01FF0BDD
+01FF0CDD
+01FF0DDD
+01FF0EDD
+01FF0FDD
+01FF10DD
+01FF11DD
+01FF12DD
+01FF13DD 01FF14DD
+01FF15DD
+01FF16DD
+01FF17DD
+01FF18DD
+01FF19DD
+01FF1ADD
+01FF1BDD
+01FF1CDD
+01FF1DDD
+01FF1EDD
+01FF1FDD
+010720DD
+
+全部拥有
+
+01FFE1DC
+01FFE2DC
+01FFE3DC
+01FFE4DC
+01FFE5DC
+01FFE6DC
+01FFE7DC
+01FFE8DC
+01FFE9DC
+01FFEADC
+01FFEBDC
+01FFECDC
+01FFEDDC
+01FFEEDC
+01FFEFDC
+01FFF0DC
+01FFF1DC
+01FFF2DC
+01FFF3DC 01FFF4DC
+01FFF5DC
+01FFF6DC
+01FFF7DC
+01FFF8DC
+01FFF9DC
+01FFFADC
+01FFFBDC
+01FFFCDC
+01FFFDDC
+01FFFEDC
+01FFFFDC
+010700DD
+
+未知索引
+值基于字母出现的顺序，例如 01=A、02=B、03=C。
+
+
+010324D6 - Enable UnownDex
+01xx21DD - Slot 1
+01xx22DD - Slot 2
+01xx23DD - Slot 3
+01xx24DD - Slot 4
+01xx25DD - Slot 5
+01xx26DD - Slot 6
+01xx27DD - Slot 7
+01xx28DD - Slot 8
+01xx29DD - Slot 9
+01xx2ADD - Slot 10
+01xx2BDD - Slot 11
+01xx2CDD - Slot 12
+01xx2DDD - Slot 13
+01xx2EDD - Slot 14
+01xx2FDD - Slot 15
+01xx30DD - Slot 16
+01xx31DD - Slot 17
+01xx32DD - Slot 18
+01xx33DD - Slot 19
+01xx34DD - Slot 20
+01xx35DD - Slot 21
+01xx36DD - Slot 22
+01xx37DD - Slot 23
+01xx38DD - Slot 24
+01xx39DD - 插槽 25
+01xx3ADD - 插槽 26
+
+包物品代码
+物品口袋物品
+FF 必须放在（项目数+1）的字节中。
+
+01xx6AD6 - 项目数量
+01xx6BD6 - 项目 1
+01xx6CD6 - 项目 1 数量
+01xx6DD6 - 项目 2
+01xx6ED6 - 项目 2 数量
+01xx6FD6 - 项目 3
+01xx70D6 - 项目 3 数量
+01xx71D6 - 项目 4
+01xx72D6 - 项目 4 数量
+01xx73D6 -
+项目 5 数量
+01xx75D6 - 项目 6
+01xx77D6 - 项目 6 数量
+01xx78D6 - 项目 7
+01xx79D6 - 项目 7 数量
+01xx7AD6 - 项目 8
+01xx7BD6 - 项目 8 数量
+01xx7CD6 - 项目 9
+01xx7DD6 - 项目 9 数量
+01xx7ED6 - 项目 10 01xx7FD66
+- 项目 10 数量
+01xx81D
+- 项目 11 数量
+01xx82D6 - 项目 12
+01xx83D6 - 项目 12 数量
+01xx84D6 - 项目 13
+01xx85D6 - 项目 13 数量
+01xx86D6 - 项目 14
+01xx87D6 - 项目 14 数量
+01xx88D6 - 项目 15
+01xx89D6 - 项目 15 数量
+01xx8AD6 - 项目 16
+01xx8BD6 - 项目 16 数量
+- 项目 170
+数量 011xx8CD6
+01xx8ED6 - 项目 18
+01xx8FD6 - 项目 18 数量
+01xx90D6 - 项目 19
+01xx91D6 - 项目 19 数量
+01xx92D6 - 项目 20
+01xx93D6 - 项目 20 数量
+01FF94D6 - 列表末尾（如果有 20 个项目则使用）
+
+球
+FF 必须放在（项目数+1）的字节中。
+
+01xxAFD6 - 球数
+01xxB0D6 - 球 1
+01xxB1D6 - 球 1 数量
+01xxB2D6 - 球 2
+01xxB3D6 - 球 2 数量
+01xxB4D6 - 球 3
+01xxB5D6 - 球 3 数量
+01xxB6D6 - 球 4
+01xxB7D6 - 球 5 数量
+01xxB8D6 -
+球 6 数量 01
+01xxBAD6 - Ball 7
+01xxBBD6 - Ball 7 数量
+01xxBCD6 - Ball 8
+01xxBDD6 - Ball 8 数量
+01xxBED6 - Ball 9
+01xxBFD6 - Ball 9 数量
+01xxC0D6 - Ball 10
+01xxC1D6 - Ball 10 数量 01xxC2D6
+- Ball 11
+01xxC3D56- Ball 11 数量
+01xxCDxx
+球 12 数量
+01xxC6D6 - 列表结束（如果有 12 个球，则必须为 FF）
+
+关键项目
+FF 必须放在您拥有的最后一项之后的字节中（例如，如果您总共有 5 个关键项，请使用 01FF9AD6）。
+
+
+01xx94D6 - 关键项目数量
+01xx95D6 - 关键项目 1
+01xx96D6 - 关键项目 2
+01xx97D6 - 关键项目 3
+01xx98D6 - 关键项目 4
+01xx99D6 - 关键项目 5
+01xx9AD6 - 关键项目 6
+01xx9BD6 - 关键项目 7
+01xx9CD6 - 关键项目 8
+01xx9DD6 - 关键项目9
+01xx9ED6 - 关键项目 10
+01xx9FD6 - 关键项目 11
+01xxA0D6 - 关键项目 12
+01xxA1D6 - 关键项目 13
+01xxA2D6 - 关键项目 14
+01xxA3D6 - 关键项目 15
+01xxA4D6 - 关键项目 16
+01xxA5D6 - 关键项目 17
+01xxA6D6 - 关键项目 18
+01xxA6D6 -关键项目 18 19
+01xxA8D6 - 关键项目 20
+01xxA9D6 - 关键项目 21
+01xxAAD6 - 关键项目 22
+01xxABD6 - 关键项目 23
+01xxACD6 - 关键项目 24
+01xxADD6 - 关键项目 25
+01xxAED6 - 列表结尾（如果有 25 个项目，则必须为 FF）
+
+TM/HM
+
+016331D6 - Infinite TM01s
+016332D6 - Infinite TM02s
+016333D6 - Infinite TM03s
+016334D6 - Infinite TM04s
+016335D6 - Infinite TM05s
+016336D6 - Infinite TM06s
+016337D6 - Infinite TM07s
+016338D6 - Infinite TM08s
+016339D6 - Infinite TM09s
+01633AD6 - Infinite TM10s
+01633BD6 - Infinite TM11s
+01633CD6 - Infinite TM12s
+01633DD6 - Infinite TM13s
+01633ED6 - Infinite TM14s
+01633FD6 - Infinite TM15s
+016340D6 - Infinite TM16s
+016341D6 - Infinite TM17s
+016342D6 - Infinite TM18s
+016343D6 - Infinite TM19s
+016344D6 - Infinite TM20s
+016345D6 - Infinite TM21s
+016346D6 - Infinite TM22s
+016347D6 - Infinite TM23s
+016348D6 - Infinite TM24s
+016349D6 - Infinite TM25s
+01634AD6 - Infinite TM26s
+01634BD6 - Infinite TM27s
+01634CD6 - Infinite TM28s
+01634DD6 - Infinite TM29s
+01634ED6 - Infinite TM30s
+01634FD6 - Infinite TM31s
+016350D6 - Infinite TM32s
+016351D6 - Infinite TM33s
+016352D6 - Infinite TM34s
+016353D6 - Infinite TM35s
+016354D6 - Infinite TM36s
+016355D6 - Infinite TM37s
+016356D6 - Infinite TM38s
+016357D6 - Infinite TM39s
+016358D6 - Infinite TM40s
+016359D6 - Infinite TM41s
+01635AD6 - Infinite TM42s
+01635BD6 - Infinite TM43s
+01635CD6 - Infinite TM44s
+01635DD6 - Infinite TM45s
+01635ED6 - Infinite TM46s
+01635FD6 - Infinite TM47s
+016360D6 - Infinite TM48s
+016361D6 - Infinite TM49s
+016362D6 - Infinite TM50s
+010163D6 - HM01 (one if code is enabled then disabled)
+010164D6 - HM02 (one if code is enabled then disabled)
+010165D6 - HM03（一个如果代码被启用然后被禁用）
+010166D6 - HM04（一个如果代码被启用然后被禁用）
+010167D6 - HM05（一个如果代码被启用然后被禁用）
+010168D6 - HM06（一个如果代码被启用然后被禁用）
+010169D6 - HM07（一个如果启用代码然后禁用）
+
+PC 项目代码
+必须为您拥有的最后一件商品的数量代码添加 FF，例如，如果您有 5 件 PC 商品，请使用 01FFD4D6。
+
+
+01xxC9D6 - PC 项目数量
+01xxCAD6 - 项目 1
+01xxCBD6 - 项目 1 数量
+01xxCCD6 - 项目 2
+01xxCDD6 - 项目 2 数量
+01xxCED6 - 项目 3
+01xxCFD6 - 项目 3 数量
+01xxD0D6 - 项目 4
+01xxD1D6 - 项目 4 数量
+01xxD2D6 - 项目 5
+01xxD3D6 - 项目数量
+01xxD4D6 - 项目 6
+01xxD5D6 - 项目 6 数量
+01xxD6D6 - 项目 7
+01xxD7D6 - 项目 7 数量
+01xxD8D6 - 项目 8
+01xxD9D6 - 项目 8 数量
+01xxDAD6 - 项目 9
+01xxDBD6 - 项目 9 数量
+01xxDCD6 - 项目 10
+01xxDDD6 - 项目 10 数量
+01xxDDD61 - 项目 xx11 数量 0
+01xxDFD6 - 项目 11 数量
+01xxE0D6 - 项目 12
+01xxE1D6 - 项目 12 数量
+01xxE2D6 - 项目 13
+01xxE3D6 - 项目 13 数量
+01xxE4D6 - 项目 14
+01xxE5D6 - 项目 14 数量
+01xxE6D6 - 项目 15
+01xxE7D6 - 项目 15 数量
+01xxE8D6 - 项目 16
+01xxE9D6 - 项目 117 数量 - 项目117 数量
+01xxEBED 01xxECD6 - Item 18 01xxEDD6 - Item 18 quantity 01xxEED6 - Item 19 01xxEFD6 - Item 19 quantity 01xxF0D6 - Item 20 01xxF1D6 - Item 20 quantity 01xxF2D6 - Item 21 01xxF3D6 - Item 21 quantity 01xxF4D6 - Item 22 01xxF5D6 - Item 22 quantity 01xxF6D6 - Item 23 01xxF7D6 - 项目 23 数量
+
+
+
+
+
+
+
+
+
+
+
+
+
+01xxF8D6 - Item 24
+01xxF9D6 - Item 24 quantity
+01xxFAD6 - Item 25
+01xxFBD6 - Item 25 quantity
+01xxFCD6 - Item 26
+01xxFDD6 - Item 26 quantity
+01xxFED6 - Item 27
+01xxFFD6 - Item 27 quantity
+01xx00D7 - Item 28
+01xx01D7 - Item 28 quantity
+01xx02D7 - Item 29
+01xx03D7 - 项目 29 数量
+01xx04D7 - 项目 30
+01xx05D7 - 项目 30 数量
+01xx06D7 - 项目 31
+01xx07D7 - 项目 31 数量
+01xx08D7 - 项目 32
+01xx09D7 - 项目 32 数量
+01xx0AD7 - 项目 33
+01xx0BD7 - 项目 33 数量
+01xx0777 - 项目 34 数量 01xx0777
+- 项目 34 数量
+01xx0777 - 项目 34 数量 01 - 项目 35
+01xx0FD7 - 项目 35 数量
+01xx10D7 - 项目 36
+01xx11D7 - 项目 36 数量
+01xx12D7 - 项目 37
+01xx13D7 - 项目 37 数量
+01xx14D7 - 项目 38
+01xx15D7 - 项目 38 数量
+01xx16D7 - 项目 39
+01xx17D7 - 项目 39 数量 - 项目 39 数量 - 项目 39 数量
+01xx19D 01xx19D
+数量 01xx19D
+01xx1AD7 - Item 41
+01xx1BD7 - Item 41 quantity
+01xx1CD7 - Item 42
+01xx1DD7 - Item 42 quantity
+01xx1ED7 - Item 43
+01xx1FD7 - Item 43 quantity
+01xx20D7 - Item 44
+01xx21D7 - Item 44 quantity
+01xx22D7 - Item 45
+01xx23D7 - Item 45 quantity
+01xx24D7 - Item 46
+01xx25D7 - 项目 46 数量
+01xx26D7 - 项目 47
+01xx27D7 - 项目 47 数量
+01xx28D7 - 项目 48
+01xx29D7 - 项目 48 数量
+01xx2AD7 - 项目 49
+01xx2BD7 - 项目 49 数量
+01xx2CD7 - 项目 50
+01xx2DD7 - 项目 50 数量
+01xx2ED7 - 项目结束，FF（如果使用了所有 50 个）
+
+电脑盒名称
+01xx52D9+
+
+（通过 01xx53D9 等）
+
+
+野生神奇宝贝、训练家和敌人代码
+
+01xxAAD1 - 敌人种类
+01xxFBD0 - 敌人等级
+01xxD5D1, 01xxD8D1 - 敌人训练师修改器
+01xxAED1 - 敌人移动 1
+01xxAFD1 - 敌人移动 2
+01xxB0D1 - 敌人移动 3
+01xxB1D1 - 敌人移动 4
+
+地图代码
+
+01xxFED0 - 将游戏定位为经线。
+01xxFFD0 01xx00D1 - 穿过门后的区域修饰符（数字）
+010078CE, 010079CE, 01007ACE, 01007BCE - 穿过任何东西
+0160C0D2 - 包括不可用的经线在内的所有经线砖的工作方式就像掉进洞里一样，允许一个人进入第二代野生动物园区，并且可能未使用的橄榄城房屋（SatoMew）
+
+杂项代码
+
+0101DCD1 - 从日本金、银、水晶等价物选择战斗后可能未使用的模拟菜单。没有指明类型或 PP，没有退出（来源：Hibiki Ganaha，由 Torchickens 从日本水晶移植到韩国黄金）。
