@@ -165,6 +165,7 @@ simulator/NO$Zoomer2.3.0.2-GBA-NDS
 
 *.exe
 *.sav
+*.gb
 *.gbc
 *.gba
 *.nds
