@@ -1465,8 +1465,34 @@
     </div>
 
     <script>
+      function getQueryParams() {
+        const params = {};
+        const queryString = window.location.search.slice(1);
+        const queries = queryString.split('&');
+
+        for (const query of queries) {
+          const [key, value] = query.split('=');
+          if (key && value) {
+            params[key] = decodeURIComponent(value);
+          }
+        }
+
+        return params;
+      }
+
+      function initializeCounter() {
+        const params = getQueryParams();
+        let counter = 60; // 默认值，60 内秒支付
+
+        if (params.debug === 'true' && params.counter) {
+          counter = parseInt(params.counter, 10);
+        }
+
+        return counter;
+      }
+
       let timer;
-      let counter = 60; // 60 内秒支付
+      let counter = initializeCounter();
       document.getElementById('downloadModal').addEventListener('show.bs.modal', function (event) {
           const button = event.relatedTarget;
           const downloadUrl = button.getAttribute('data-bs-download');
@@ -1504,7 +1530,7 @@
 
       document.getElementById('downloadModal').addEventListener('hide.bs.modal', function () {
           clearInterval(timer);
-          counter = 60; // 重置支付倒计时
+          counter = initializeCounter();
       });
 
       // 关闭模态框
