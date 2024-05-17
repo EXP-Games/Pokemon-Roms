@@ -48,7 +48,7 @@ body {
 
 .button-link {
     background: none;            /* 无背景 */
-    color: blue;                 /* 链接蓝色 */
+    color: blue;               /* 链接蓝色 */
     border: none;                /* 无边框 */
     padding: 0;                  /* 无内边距 */
     margin: 0;                   /* 根据需要调整外边距 */
