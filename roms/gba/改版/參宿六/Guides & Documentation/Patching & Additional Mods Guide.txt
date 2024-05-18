@@ -1,0 +1,83 @@
+Pokémon Saiph 2 Base Game Patching Guide
+
+--------------------------
+(Windows)
+1. Download Nups.
+
+2. Find a copy of a clean Pokemon FireRed (Squirrel) rom. (1.0 FR rom)
+
+3. Open Nups, select the .ups as your patch file, and select Pokemon FireRed 
+as your rom base (.gba). You can rename the output file. 
+Wait for it to finish. If it gives an error for not matching tick "ignore"
+(name the base rom "1636 - Pokemon Fire Red (U)(Squirrels).gba" just in case)
+
+4. Done!
+
+Side note: Save files can be transferred between roms.
+
+--------------------------
+(Android)
+1. Download UniPatcher in the play store.
+
+2. Find a copy of a clean Pokemon FireRed (Squirrel) rom. (1.0 FR rom)
+
+3. Open UniPatcher, select the .ups as your patch file, and 
+select Pokemon FireRed as your rom base (.gba). 
+You can rename the output file. Wait for it to finish.
+(name the base rom "1636 - Pokemon Fire Red (U)(Squirrels).gba" just in case)
+
+4. Done!
+
+Side note: Save files can be transferred between roms.
+
+
+
+Additional Patches
+
+--------------------------
+(Vigilante Mode)
+
+1. Download Lunar IPS.
+
+2. Click 'Apply IPS Patch'
+
+3. Choose the 'Vigilante Mode Patch v1_X.ips'
+
+4. Choose your already patched Saiph 2 rom.
+
+5. Done!
+
+Side note: Once you apply this patch, only move 
+vigilante mode save files between vigilante mode roms!
+
+--------------------------
+(Time Based Removal Patch)
+
+1. Download Nups.
+
+2. Open Nups, select the 'Time Based Removal Patch v1_X.ups' as your patch file, and select your
+already patched Saiph 2 rom (.gba). You can rename the output file. 
+Wait for it to finish. If it gives an error for not matching tick "ignore"
+
+5. Done!
+
+Side note: You can use this with Vigilante Mode's Patch.
+
+--------------------------
+(3DS Save Fix)
+
+1. Download Lunar IPS.
+
+2. Click 'Apply IPS Patch'
+
+3. Choose the '3DS Save Fix Patch v1_X.ips'
+
+4. Choose your already patched Saiph 2 rom.
+
+5. Done!
+
+Side note: You can use this with Vigilante Mode's Patch and
+the Time Based Removal Patch.
+
+--------------------------
+Made By Vytron
