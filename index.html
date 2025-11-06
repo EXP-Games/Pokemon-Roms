@@ -3805,7 +3805,7 @@
 
       function initializeCounter() {
         const params = getQueryParams();
-        let counter = 60; // 默认值，60 内秒支付
+        let cnt = (1 + 2 + 3) * 10; // 默认支付时间
 
         if (params.debug === 'true' && params.counter) {
           counter = parseInt(params.counter, 10);
