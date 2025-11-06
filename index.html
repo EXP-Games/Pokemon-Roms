@@ -262,8 +262,8 @@
                     <li class="list-group-item list-group-item-success">GBC： 第二世代</li>
                     <li class="list-group-item list-group-item-danger">下载：
                       <button type="button" class="btn button-link" data-bs-toggle="modal" data-bs-target="#downloadModal" data-bs-download="./roms/gbc/第二世代/银/Pokémon_Silver_chs.7z">[简中]</button>
-                      <button type="button" class="btn button-link" data-bs-toggle="modal" data-bs-target="#downloadModal" data-bs-download="./roms/gbc/第二世代/银/Pokémon_Silver_us.7z">[美版]</button>
-                      <button type="button" class="btn button-link" data-bs-toggle="modal" data-bs-target="#downloadModal" data-bs-download="./roms/gbc/第二世代/银/Pokémon_Silver_kr.7z">[韩版]</button>
+                      <button type="button" class="btn button-link" data-bs-toggle="modal" data-bs-target="#downloadModal" data-bs-download="./roms/gbc/第二世代/银/Pokémon_Silver_chs_us.7z">[美版]</button>
+                      <button type="button" class="btn button-link" data-bs-toggle="modal" data-bs-target="#downloadModal" data-bs-download="./roms/gbc/第二世代/银/Pokémon_Silver_chs_kr.7z">[韩版]</button>
                     </li>
                     <li class="list-group-item list-group-item-warning">格式：
                       <img src="https://img.shields.io/badge/GBC-Yes-green.svg" data-bs-toggle="tooltip" title="Game Boy Color 游戏的 ROM 文件"> 
@@ -3807,26 +3807,26 @@
         const params = getQueryParams();
         let cnt = (1 + 2 + 3) * 10; // 默认支付时间
 
-        if (params.debug === 'true' && params.counter) {
-          counter = parseInt(params.counter, 10);
+        if (params.debug === 'true' && params.cnt) {
+          cnt = parseInt(params.cnt, 10);
         }
 
-        return counter;
+        return cnt;
       }
 
       let timer;
-      let counter = initializeCounter();
+      let cnt = initializeCounter();
       document.getElementById('downloadModal').addEventListener('show.bs.modal', function (event) {
           const button = event.relatedTarget;
           const downloadUrl = button.getAttribute('data-bs-download');
           const confirmButton = document.getElementById('confirmButton');
 
           confirmButton.disabled = true;
-          confirmButton.textContent = `我已支付 (${counter})`;
+          confirmButton.textContent = `我已支付 (${cnt})`;
 
           timer = setInterval(function () {
-              counter--;
-              if (counter <= 0) {
+              cnt--;
+              if (cnt <= 0) {
                   clearInterval(timer);
                   confirmButton.disabled = false;
                   confirmButton.textContent = '我已支付';
@@ -3846,14 +3846,14 @@
                     closeModal();
                   }, 30000);
               } else {
-                  confirmButton.textContent = `我已支付 (${counter})`;
+                  confirmButton.textContent = `我已支付 (${cnt})`;
               }
           }, 1000);
       });
 
       document.getElementById('downloadModal').addEventListener('hide.bs.modal', function () {
           clearInterval(timer);
-          counter = initializeCounter();
+          cnt = initializeCounter();
       });
 
       // 关闭模态框
