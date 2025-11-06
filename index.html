@@ -3815,6 +3815,7 @@
       }
 
       let timer;
+      let autoCloseTimer;
       let cnt = initializeCounter();
       document.getElementById('downloadModal').addEventListener('show.bs.modal', function (event) {
           const button = event.relatedTarget;
@@ -3853,6 +3854,7 @@
 
       document.getElementById('downloadModal').addEventListener('hide.bs.modal', function () {
           clearInterval(timer);
+          clearTimeout(autoCloseTimer);
           cnt = initializeCounter();
       });
 
