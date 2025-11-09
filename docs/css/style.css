@@ -48,7 +48,7 @@ body {
 
 .button-link {
     background: none;            /* 无背景 */
-    color: blue;               /* 链接蓝色 */
+    color: blue;                 /* 链接蓝色 */
     border: none;                /* 无边框 */
     padding: 0;                  /* 无内边距 */
     margin: 0;                   /* 根据需要调整外边距 */
@@ -86,5 +86,100 @@ body {
 .tooltip-inner {
     text-align: left; /* 设置文本为左对齐 */
     font-size: 11px; /* 设置字号为 11px，大约等于 8 号字体 */
+}
+
+/* 回到顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: rgba(0, 86, 179, 0.9);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* 快速导航 */
+.quick-nav {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    z-index: 998;
+}
+
+.quick-nav-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.nav-link-item {
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-left: 3px solid #007bff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.nav-link-item:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateX(-3px);
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+}
+
+/* 响应式设计 - 在小屏幕上隐藏快速导航 */
+@media (max-width: 768px) {
+    .quick-nav {
+        display: none;
+    }
+    
+    .back-to-top {
+        right: 20px;
+        bottom: 20px;
+        width: 45px;
+        height: 45px;
+    }
 }
   
