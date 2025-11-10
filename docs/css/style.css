@@ -160,6 +160,9 @@ body {
     border-radius: 3px;
     transition: all 0.3s ease;
     font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-link-item:hover {
@@ -167,6 +170,23 @@ body {
     color: white;
     transform: translateX(-3px);
     box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+}
+
+.nav-count-badge {
+    background-color: #28a745;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-left: 8px;
+    min-width: 30px;
+    text-align: center;
+}
+
+.nav-link-item:hover .nav-count-badge {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
 }
 
 /* 响应式设计 - 在小屏幕上隐藏快速导航 */
