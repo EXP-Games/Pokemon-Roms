@@ -8,6 +8,7 @@
     <script src="./docs/js/bootstrap.bundle.min.js"></script>
     <link href="./docs/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./docs/css/style.css">
+    <script src="./docs/js/navigation.js"></script>
 </head>
 <body>
     <div class="container my-3 sticky-top">
@@ -3764,6 +3765,22 @@
       </div>
     </div>
 
+
+    <br/>
+
+    <!-- 回到顶部按钮 -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()" title="回到顶部">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+        </svg>
+    </button>
+
+    <!-- 快速导航 -->
+    <div id="quickNav" class="quick-nav">
+        <div class="quick-nav-title">游戏导航</div>
+        <div id="navLinks" class="nav-links"></div>
+    </div>
+
     <!-- 支付模态框 -->
     <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
@@ -3786,22 +3803,7 @@
           </div>
       </div>
     </div>
-
-    <!-- 回到顶部按钮 -->
-    <button id="backToTop" class="back-to-top" onclick="scrollToTop()" title="回到顶部">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-        </svg>
-    </button>
-
-    <!-- 快速导航 -->
-    <div id="quickNav" class="quick-nav">
-        <div class="quick-nav-title">游戏导航</div>
-        <div id="navLinks" class="nav-links"></div>
-    </div>
-
     <script src="./docs/js/main.js"></script>
-    <script src="./docs/js/navigation.js"></script>
 
 </body>
 </html>
