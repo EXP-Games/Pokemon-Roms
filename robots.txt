@@ -1,0 +1,56 @@
+# robots.txt for Pokemon-Roms
+# https://exp-games.github.io/Pokemon-Roms/
+
+# 允许所有搜索引擎爬虫访问
+User-agent: *
+Allow: /
+
+# 不允许爬取的目录（如果有敏感文件或不需要索引的内容）
+Disallow: /simulator/
+Disallow: /tools/
+Disallow: /.git/
+
+# 允许爬取的资源
+Allow: /docs/
+Allow: /imgs/
+Allow: /roms/
+
+# 特定搜索引擎优化
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Google 图片
+User-agent: Googlebot-Image
+Allow: /imgs/
+Allow: /docs/
+Allow: /roms/
+
+# 百度
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# 必应
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# 360搜索
+User-agent: 360Spider
+Allow: /
+Crawl-delay: 2
+
+# 搜狗
+User-agent: Sogou web spider
+Allow: /
+Crawl-delay: 2
+
+# Sitemap 位置
+Sitemap: https://exp-games.github.io/Pokemon-Roms/sitemap.xml

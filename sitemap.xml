@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- 主页 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- 第一世代 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/#section-01</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 第二世代 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/#section-02</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 第三世代 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/#section-03</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- 第四世代 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/#section-04</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 第五世代 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/#section-05</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 第六世代 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/#section-06</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 第七世代 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/#section-07</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 第八世代 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/#section-08</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 第九世代 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/#section-09</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- 非官方改版 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/#section-mod</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- 模拟器下载 -->
+  <url>
+    <loc>https://exp-games.github.io/Pokemon-Roms/#section-simulator</loc>
+    <lastmod>2025-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
