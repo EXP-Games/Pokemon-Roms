@@ -189,6 +189,77 @@ body {
     color: white;
 }
 
+/* 导航链接激活状态 */
+.nav-link-item.active {
+    background-color: rgba(33, 150, 243, 0.3);
+    border-left: 4px solid #2196F3;
+    font-weight: bold;
+}
+
+.nav-link-item.active .nav-count-badge {
+    background-color: #2196F3;
+    color: white;
+}
+
+/* 分页导航栏样式 */
+.section-navigation-bar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    margin-bottom: 20px;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 导航按钮样式 */
+.section-navigation-bar button {
+    transition: all 0.3s ease;
+}
+
+.section-navigation-bar button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #f4e5a1, #d4af37, #f4e5a1) !important;
+    border-color: #f4e5a1 !important;
+    transform: scale(1.08);
+    box-shadow: 0 4px 15px rgba(244, 229, 161, 0.6);
+}
+
+.section-navigation-bar button:active:not(:disabled) {
+    transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.4);
+}
+
+.section-navigation-bar button:disabled {
+    opacity: 0.4 !important;
+    cursor: not-allowed;
+    background: linear-gradient(135deg, #666, #555, #666) !important;
+    border-color: #555 !important;
+    filter: grayscale(100%);
+}
+
+/* Section 切换动画 */
+.section-content-fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 /* 响应式设计 - 在小屏幕上隐藏快速导航 */
 @media (max-width: 768px) {
     .quick-nav {
@@ -201,5 +272,17 @@ body {
         width: 45px;
         height: 45px;
     }
+    
+    .section-navigation-bar {
+        font-size: 14px;
+    }
+    
+    .section-navigation-bar button {
+        font-size: 12px;
+        padding: 5px 10px;
+        min-width: 80px !important;
+    }
 }
+  
+  
   

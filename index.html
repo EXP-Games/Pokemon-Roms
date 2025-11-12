@@ -48,7 +48,6 @@
     <link href="./docs/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./docs/css/style.css">
     <script src="./docs/js/bootstrap.bundle.min.js"></script>
-    <script src="./docs/js/navigation.js"></script>
     
     <!-- 结构化数据 (JSON-LD) -->
     <script type="application/ld+json">
@@ -67,6 +66,29 @@
     </script>
 </head>
 <body>
+    <!-- 支付模态框 -->
+    <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="downloadModalLabel">请在 60 秒内<font color="red">支付 5 元</font>后下载：</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                  <div class="d-flex justify-content-around">
+                      <img src="./imgs/pay/alipay.png" class="img-fluid" alt="alipay" width="33%">
+                      <img src="./imgs/pay/wechat.png" class="img-fluid" alt="wechat" width="33%">
+                      <img src="./imgs/pay/QQ.png" class="img-fluid" alt="QQ" width="33%">
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" onclick="closeModal()">取消下载</button>
+                  <button type="button" class="btn btn-primary" id="confirmButton" disabled>我已支付 (60)</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
     <div class="container my-3 sticky-top">
       <div class="header-container">
           <h1 class="header-title">
@@ -3837,29 +3859,29 @@
         <div id="navLinks" class="nav-links"></div>
     </div>
 
-    <!-- 支付模态框 -->
-    <div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-      <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="downloadModalLabel">请在 60 秒内<font color="red">支付 5 元</font>后下载：</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                  <div class="d-flex justify-content-around">
-                      <img src="./imgs/pay/alipay.png" class="img-fluid" alt="alipay" width="33%">
-                      <img src="./imgs/pay/wechat.png" class="img-fluid" alt="wechat" width="33%">
-                      <img src="./imgs/pay/QQ.png" class="img-fluid" alt="QQ" width="33%">
-                  </div>
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" onclick="closeModal()">取消下载</button>
-                  <button type="button" class="btn btn-primary" id="confirmButton" disabled>我已支付 (60)</button>
-              </div>
-          </div>
-      </div>
-    </div>
-    <script src="./docs/js/main.js" defer></script>
+    <!-- ==================== 脚本加载区 ==================== -->
+    <!-- 
+        加载顺序说明：
+        1. main.js - 模态框倒计时核心功能（立即加载，无需等待 DOM）
+        2. pagination.js - 分页系统（隐藏其他 section，只显示当前 section）
+        3. lazy-load.js - 图片懒加载（只加载当前 section 的图片）
+        4. navigation.js - 快速导航生成（配合分页系统切换 section）
+        5. protection.min.js - 页面保护脚本（最后执行）
+    -->
+    
+    <!-- 1. 模态框核心功能 - 确保倒计时立即可用 -->
+    <script src="./docs/js/main.js"></script>
+    
+    <!-- 2. 分页系统 - 隐藏其他系列，只显示当前系列 ⭐ NEW -->
+    <script src="./docs/js/pagination.js"></script>
+    
+    <!-- 3. 图片懒加载 - DOMContentLoaded 时执行 -->
+    <script src="./docs/js/lazy-load.js"></script>
+    
+    <!-- 4. 快速导航生成 - 依赖页面中的 section-* 元素 -->
+    <script src="./docs/js/navigation.js"></script>
+    
+    <!-- 5. 页面保护脚本 - 延迟加载不影响核心功能 -->
     <script src="./docs/js/protection.min.js" defer></script>
 
 </body>
