@@ -51,43 +51,52 @@
         });
 
         // 3. 开发者工具检测（每10秒检测一次）
-        let devtoolsOpen = false;
-        const threshold = 160;
+        // 检测是否为移动设备
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         
-        const detectDevTools = function() {
-            const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-            const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+        // 仅在非移动设备上启用开发者工具检测
+        if (!isMobile) {
+            let devtoolsOpen = false;
+            const threshold = 160;
             
-            if ((widthThreshold || heightThreshold) && !devtoolsOpen) {
-                devtoolsOpen = true;
-                // 清空页面内容并显示警告，保留原背景色
-                document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-size:24px;flex-direction:column;"><div style="background:rgba(255,255,255,0.95);padding:40px 60px;border-radius:15px;box-shadow:0 8px 32px rgba(0,0,0,0.3);text-align:center;"><div style="font-size:48px;margin-bottom:20px;">⚠️</div><div style="color:#dc3545;font-weight:bold;margin-bottom:15px;">检测到开发者工具</div><div style="font-size:18px;color:#666;">页面已被禁用，请关闭开发者工具后刷新页面</div></div></div>';
-            }
-        };
-        
-        // 每10秒检测一次
-        setInterval(detectDevTools, 10000);
-        // 初始检测一次
-        detectDevTools();
+            const detectDevTools = function() {
+                const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                
+                if ((widthThreshold || heightThreshold) && !devtoolsOpen) {
+                    devtoolsOpen = true;
+                    // 清空页面内容并显示警告，保留原背景色
+                    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-size:24px;flex-direction:column;"><div style="background:rgba(255,255,255,0.95);padding:40px 60px;border-radius:15px;box-shadow:0 8px 32px rgba(0,0,0,0.3);text-align:center;"><div style="font-size:48px;margin-bottom:20px;">⚠️</div><div style="color:#dc3545;font-weight:bold;margin-bottom:15px;">检测到开发者工具</div><div style="font-size:18px;color:#666;">页面已被禁用，请关闭开发者工具后刷新页面</div></div></div>';
+                }
+            };
+            
+            // 每10秒检测一次
+            setInterval(detectDevTools, 10000);
+            // 初始检测一次
+            detectDevTools();
+        }
 
         // 4. 检测调试器（每10秒检测一次）
-        let debuggerCheckCount = 0;
-        setInterval(function() {
-            const startTime = performance.now();
-            debugger; // 如果开发者工具打开，这里会暂停
-            const endTime = performance.now();
-            
-            // 如果执行时间过长，说明遇到了 debugger 断点
-            if (endTime - startTime > 100) {
-                debuggerCheckCount++;
-                // 连续检测到2次才执行操作，避免误判
-                if (debuggerCheckCount >= 2) {
-                    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-size:24px;flex-direction:column;"><div style="background:rgba(255,255,255,0.95);padding:40px 60px;border-radius:15px;box-shadow:0 8px 32px rgba(0,0,0,0.3);text-align:center;"><div style="font-size:48px;margin-bottom:20px;">⚠️</div><div style="color:#dc3545;font-weight:bold;margin-bottom:15px;">检测到调试器</div><div style="font-size:18px;color:#666;">页面已被禁用</div></div></div>';
+        // 仅在非移动设备上启用调试器检测
+        if (!isMobile) {
+            let debuggerCheckCount = 0;
+            setInterval(function() {
+                const startTime = performance.now();
+                debugger; // 如果开发者工具打开，这里会暂停
+                const endTime = performance.now();
+                
+                // 如果执行时间过长，说明遇到了 debugger 断点
+                if (endTime - startTime > 100) {
+                    debuggerCheckCount++;
+                    // 连续检测到2次才执行操作，避免误判
+                    if (debuggerCheckCount >= 2) {
+                        document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-size:24px;flex-direction:column;"><div style="background:rgba(255,255,255,0.95);padding:40px 60px;border-radius:15px;box-shadow:0 8px 32px rgba(0,0,0,0.3);text-align:center;"><div style="font-size:48px;margin-bottom:20px;">⚠️</div><div style="color:#dc3545;font-weight:bold;margin-bottom:15px;">检测到调试器</div><div style="font-size:18px;color:#666;">页面已被禁用</div></div></div>';
+                    }
+                } else {
+                    debuggerCheckCount = 0; // 重置计数
                 }
-            } else {
-                debuggerCheckCount = 0; // 重置计数
-            }
-        }, 10000);
+            }, 10000);
+        }
 
         // 5. 混淆控制台输出（延迟5秒执行，确保页面加载完成）
         setTimeout(function() {
