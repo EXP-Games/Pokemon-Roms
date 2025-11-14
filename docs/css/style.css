@@ -1,3 +1,20 @@
+/* 移动端优化 - 基础设置 */
+* {
+    box-sizing: border-box;
+}
+
+/* 性能优化 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a, button {
+    -webkit-tap-highlight-color: rgba(0, 123, 255, 0.3);
+    tap-highlight-color: rgba(0, 123, 255, 0.3);
+}
+
 body {
     /* 创建一个角度倾斜的七彩渐变背景，每种颜色加 50% 透明度 */
     background: linear-gradient(45deg, 
@@ -10,6 +27,9 @@ body {
                                 rgba(238, 130, 238, 0.5)); /* violet */
     background-attachment: fixed;
     background-size: cover;
+    overflow-x: hidden; /* 防止横向滚动 */
+    -webkit-text-size-adjust: 100%; /* 防止iOS字体自动调整 */
+    -webkit-overflow-scrolling: touch; /* iOS 平滑滚动 */
 }
 
 .sticky-top {
@@ -40,10 +60,18 @@ body {
     padding: 2px; /* 在图片周围添加10px的间隙 */
     max-width: 100%; /* 确保图片不会超出容器宽度 */
     height: auto; /* 保持图片原有比例 */
+    object-fit: contain; /* 保持图片比例 */
+}
+
+.card {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
 }
 
 .bold-border {
     border: 2px solid #000000; /* 设置边框为2px粗且颜色为黑色 */
+    overflow: hidden; /* 防止内容溢出 */
 }
 
 .button-link {
@@ -55,6 +83,11 @@ body {
     font: inherit;               /* 继承字体样式 */
     cursor: pointer;             /* 手型光标 */
     text-decoration: underline;  /* 下划线，模仿链接 */
+    min-height: 44px;            /* 移动端最小触摸区域 */
+    min-width: 44px;             /* 移动端最小触摸区域 */
+    display: inline-flex;        /* Flexbox 布局 */
+    align-items: center;         /* 垂直居中 */
+    justify-content: center;     /* 水平居中 */
 }
 
 .button-link:hover,
@@ -63,14 +96,79 @@ body {
     color: darkblue;             /* 悬停时颜色加深 */
 }
 
+/* Badge 徽章样式优化 */
+.list-group-item-warning {
+    white-space: nowrap;         /* 防止换行 */
+    overflow-x: auto;            /* 允许横向滚动 */
+    overflow-y: hidden;          /* 隐藏纵向滚动 */
+    -webkit-overflow-scrolling: touch; /* iOS 平滑滚动 */
+    scrollbar-width: thin;       /* Firefox 细滚动条 */
+    scrollbar-color: rgba(0, 123, 255, 0.3) transparent; /* 滚动条颜色 */
+}
+
+/* Webkit 浏览器滚动条样式 */
+.list-group-item-warning::-webkit-scrollbar {
+    height: 4px;                 /* 滚动条高度 */
+}
+
+.list-group-item-warning::-webkit-scrollbar-track {
+    background: transparent;     /* 滚动条轨道背景 */
+}
+
+.list-group-item-warning::-webkit-scrollbar-thumb {
+    background: rgba(0, 123, 255, 0.3); /* 滚动条滑块颜色 */
+    border-radius: 2px;          /* 圆角 */
+}
+
+.list-group-item-warning::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 123, 255, 0.5); /* 悬停时颜色 */
+}
+
+.list-group-item-warning img {
+    display: inline-block;       /* 内联块元素 */
+    vertical-align: middle;      /* 垂直居中 */
+    margin: 2px 3px;             /* 徽章之间的间距 */
+    max-width: none;             /* 不限制宽度 */
+    height: 20px;                /* 固定高度 */
+    width: auto;                 /* 宽度自适应 */
+    flex-shrink: 0;              /* 不允许收缩 */
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+    .button-link {
+        padding: 8px 12px;
+    }
+    
+    .nav-link-item {
+        padding: 12px 16px;
+        min-height: 48px;
+    }
+    
+    .back-to-top {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 
 .header-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* 允许换行 */
+    gap: 10px;
 }
 .header-title {
     margin-bottom: 0;
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.header-title img {
+    height: 60px;
+    width: auto;
+    max-width: 100%;
 }
 .header-explanation {
     padding: 10px;
@@ -80,6 +178,7 @@ body {
     border-radius: 5px;
     white-space: nowrap;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    line-height: 1.4;
 }
 
 
@@ -260,29 +359,255 @@ body {
     }
 }
 
-/* 响应式设计 - 在小屏幕上隐藏快速导航 */
+/* 响应式设计 - 移动端优化 */
 @media (max-width: 768px) {
+    /* 隐藏快速导航 */
     .quick-nav {
         display: none;
     }
     
+    /* 优化回到顶部按钮 */
     .back-to-top {
-        right: 20px;
-        bottom: 20px;
+        right: 15px;
+        bottom: 15px;
         width: 45px;
         height: 45px;
+        font-size: 18px;
     }
     
+    /* 优化分页导航栏 */
     .section-navigation-bar {
-        font-size: 14px;
+        font-size: 12px;
+        padding: 8px 5px !important;
     }
     
     .section-navigation-bar button {
+        font-size: 11px;
+        padding: 4px 8px;
+        min-width: 70px !important;
+    }
+    
+    .section-navigation-bar .btn-group {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    /* 优化头部 */
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .header-title img {
+        height: 40px !important;
+    }
+    
+    .header-explanation {
+        margin-left: 0;
+        white-space: normal;
+        width: 100%;
+        text-align: center;
         font-size: 12px;
-        padding: 5px 10px;
-        min-width: 80px !important;
+        padding: 8px;
+    }
+    
+    /* 优化卡片布局 */
+    .card {
+        margin-bottom: 15px !important;
+    }
+    
+    .card-body {
+        padding: 10px !important;
+    }
+    
+    .card-title {
+        font-size: 18px !important;
+    }
+    
+    .list-group-item {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    
+    /* 优化卡片图片布局 */
+    .card .row.g-0 {
+        flex-direction: column !important;
+    }
+    
+    .card .col-md-4,
+    .card .col-md-8 {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    .card-img {
+        max-width: 200px;
+        margin: 10px auto;
+    }
+    
+    /* 优化徽章 - 保持水平排列 */
+    .list-group-item-warning {
+        white-space: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+    }
+    
+    .list-group-item-warning img {
+        height: 18px !important;
+        width: auto !important;
+        max-width: none !important;
+        min-width: auto !important;
+        flex-shrink: 0;
+    }
+    
+    /* 优化按钮 */
+    .button-link {
+        font-size: 12px;
+    }
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* 优化模态框 */
+    .modal-dialog {
+        margin: 10px;
+    }
+    
+    .modal-body img {
+        width: 30% !important;
+    }
+    
+    .modal-title {
+        font-size: 16px;
+    }
+    
+    .modal-footer button {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+    
+    /* 优化标题 */
+    h4 {
+        font-size: 18px !important;
+        padding: 8px 0;
+    }
+    
+    /* 优化 tooltip */
+    .tooltip-inner {
+        font-size: 10px;
+        max-width: 200px;
     }
 }
+
+/* 平板设备优化 (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .quick-nav {
+        right: 15px;
+        min-width: 120px;
+        padding: 10px;
+    }
+    
+    .quick-nav-title {
+        font-size: 14px;
+    }
+    
+    .nav-link-item {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    .header-title img {
+        height: 50px !important;
+    }
+    
+    .header-explanation {
+        font-size: 13px;
+        padding: 8px;
+    }
+    
+    .card-title {
+        font-size: 20px !important;
+    }
+    
+    .list-group-item {
+        font-size: 13px;
+    }
+}
+
+/* 小屏手机优化 (最大 576px) */
+@media (max-width: 576px) {
+    .header-title img {
+        height: 35px !important;
+    }
+    
+    .card-title {
+        font-size: 16px !important;
+    }
+    
+    .list-group-item {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+    
+    /* 小屏手机徽章优化 */
+    .list-group-item-warning img {
+        height: 16px !important;
+        margin: 1px 2px;
+    }
+    
+    .card-footer small {
+        font-size: 10px;
+    }
+    
+    .section-navigation-bar button {
+        font-size: 10px;
+        padding: 3px 6px;
+        min-width: 60px !important;
+    }
+    
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    h4 {
+        font-size: 16px !important;
+    }
+}
+
+/* 横屏模式优化 */
+@media (max-width: 768px) and (orientation: landscape) {
+    .header-container {
+        flex-direction: row;
+    }
+    
+    .header-explanation {
+        width: auto;
+        font-size: 11px;
+    }
+    
+    .card .row.g-0 {
+        flex-direction: row !important;
+    }
+    
+    .card .col-md-4 {
+        max-width: 40% !important;
+        width: 40% !important;
+    }
+    
+    .card .col-md-8 {
+        max-width: 60% !important;
+        width: 60% !important;
+    }
+}
+  
+  
   
   
   
